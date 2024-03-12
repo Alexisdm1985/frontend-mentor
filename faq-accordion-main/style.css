@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'WorkSans';
+    src: url('./assets/fonts/WorkSans-VariableFont_wght.ttf');
+}
+:root {
+    --color-white: hsl(0, 0%, 100%);
+    --color-light-pink: hsl(275, 100%, 97%);
+    --color-grayish-purple: hsl(292, 16%, 49%);
+    --color-grayish-purple-shadow: hsl(292, 16%, 49%, 20%);
+    --color-dark-purple: hsl(292, 42%, 14%);
+    --color-purple-hover: #AD28EB;
+}
+
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 400px;
+    width: 100%;
+    font-family: 'WorkSans';
+    background-image: url('./assets/images/background-pattern-mobile.svg');
+}
+
+p {
+    font-size: 14px;
+    color: var(--color-grayish-purple);
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 58%;
+    background-color: var(--color-light-pink);
+    display: flex;
+    justify-content: center;
+    align-items: start; 
+}
+
+section {
+    width: 85%;
+    position: absolute;
+    top: -90px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+}
+
+.card {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem 1.5rem;
+    box-shadow: 0px 20px 40px var(--color-grayish-purple-shadow);
+}
+
+.card-header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 0;
+    margin-bottom: 1.5rem;
+}
+
+.accordion {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+details {
+    width: 100%;
+}
+
+/* details > summary {
+    list-style: none;
+} */
+
+/* details summary::-webkit-details-marker {
+    display:none;
+  } */
+
+summary {
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+summary:hover {
+    color: var(--color-purple-hover);
+}
+summary img {
+    margin-left: 10px;
+}
+
+.icon-minus {
+    display: none;
+}
+
+details[open] .icon-plus {
+    display: none;
+}
+details[open] .icon-minus {
+    display: flex;
+}
+
+@media (min-width: 426px){
+    body {
+        background-image: url('./assets/images/background-pattern-desktop.svg');
+        /* background-position: center; */
+    }
+ 
+    main {
+        top: 80%;
+        height: 100%;
+    }
+    section {
+        max-width: 520px;
+    }
+
+}
