@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @font-face {
+      font-family: 'Roboto';
+      src: url('./assets/fonts/Roboto-Regular.ttf'),
+        url('./assets/fonts/Roboto-Bold.ttf');
+    }
+  </style>
+  <!-- displays site properly based on user's device -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+</head>
+
+<body
+  class="font-[Roboto] text-[#242742] text-wrap md:bg-[#36384e] md:flex md:justify-center md:min-h-screen md:items-center">
+
+  <main
+    class="flex flex-col gap-4 md:flex-row-reverse md:bg-white md:shadow-xl md:h-3/5 md:p-7 md:rounded-2xl md:w-4/6 md:gap-9">
+    <picture>
+      <source media="(max-width: 767px)" srcset="./assets/images/illustration-sign-up-mobile.svg"
+        class="bg-cover rounded-b-md w-full bg-center">
+
+      <img src="./assets/images/illustration-sign-up-desktop.svg" alt="Imagen de fondo"
+        class="bg-cover rounded-b-md w-full">
+    </picture>
+
+    <section class="p-7 md:flex md:flex-col md:justify-center md:w-3/6">
+      <h1 class="font-bold text-[#242742] text-4xl pb-5 md:text-6xl">Stay updated!</h1>
+      <p class="pb-5">Join 60,000+ product managers receiving monthly updates on:</p>
+
+      <ul>
+        <li class="flex items-start my-4">
+          <img src="./assets/images/icon-list.svg" class="w-5 mr-4" alt="">
+          Product discovery and building what matters
+        </li>
+        <li class="flex items-start my-4 ">
+          <img src="./assets/images/icon-list.svg" class="w-5 mr-4" alt="">
+          Measuring to ensure updates are a success
+        </li>
+        <li class="flex items-start my-4 ">
+          <img src="./assets/images/icon-list.svg" class="w-5 mr-4" alt="">
+          And much more!
+        </li>
+      </ul>
+
+      <div class="pt-7 flex flex-col">
+        <label class="font-bold text-[#242742] mb-2" for="email">Email address</label>
+        <input class="py-4 px-6 outline-0 border-solid border-2 border-[#242742] rounded-lg" type="email" id="email"
+          placeholder="email@company.com">
+        <button class="bg-[#242742] text-white text-base mt-6 rounded-md py-4">Subscribe to monthly newsletter</button>
+      </div>
+    </section>
+  </main>
+  <!-- Thanks for subscribing! -->
+
+  <!-- A confirmation email has been sent to ash@loremcompany.com. -->
+  <!-- Please open it and click the button inside to confirm your subscription. -->
+</body>
+
+</html>
